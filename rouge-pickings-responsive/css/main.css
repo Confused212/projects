@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'Wisdom Script';
+    src: url('../fonts/wisdom-script.otf') format('opentype');
+}
+
+body {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 30px;
+}
+
+
+/*The widths are in a percentage!*/
+
+header {
+    height: 110px;
+    border-bottom: 3px solid #77a466;
+    margin: 0 auto;
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 38px 0;
+}
+
+header h1 span {
+    color: #77a466;
+}
+
+header nav {
+    float: right;
+    padding: 46px 0;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 0 10px;
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #77a466;
+}
+
+
+/*The widths are in a percentage!*/
+
+.top-section,
+.bottom-section {
+    margin: 0 auto;
+    clear: both;
+}
+
+.main-image {
+    height: auto;
+    float: left;
+}
+
+.main-image img {
+    width: 100%;
+    border-bottom: 3px solid #77a466;
+}
+
+.main-title {
+    height: auto;
+    float: left;
+}
+
+.main-title h3 {
+    text-align: left;
+    padding: 5px 0;
+    color: #77a466;
+}
+
+.main-title p {
+    padding: 0;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.bottom-section p {
+    font-size: 1.1rem;
+}
+
+.section-one,
+.section-two,
+.section-three {
+    width: 33%;
+    height: auto;
+    float: left;
+    border-top: 1px solid #eee;
+}
+
+.section-one h4 {
+    padding: 10px 0;
+}
+
+.section-two {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+
+.section-two h4,
+.section-three h4 {
+    padding: 10px 30px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px 0;
+    color: #77a466;
+}
+
+.reviews {
+    color: #333;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.address {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+/*The widths are in a percentage!*/
+
+footer {
+    height: 50px;
+    border-top: 3px solid #eee;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+}
+
+footer span {
+    font-family: 'Wisdom Script', cursive;
+    text-transform: lowercase;
+    color: #77a466;
+    font-size: 14px;
+}
+
+
+/* TABLET */
+
+@media (min-width: 601px) and (max-width: 815px) and (orientation: landscape) {
+    header h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+    }
+    header nav {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+        font-size: 1.3em;
+    }
+    header nav ul li {
+        font-size: 0.8em;
+        line-height: 1.5em;
+        padding: 5px 5px;
+        margin: 5px 5px;
+    }
+    .main-title p,
+    .main-title h3,
+    .main-image {
+        padding: 0 10px;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .section-one {
+        width: 100%;
+        text-align: center;
+    }
+    .section-two {
+        width: 100%;
+        text-align: center;
+    }
+    .section-two p {
+        margin: 0 60px;
+    }
+    .section-three {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+        margin: 0;
+        border: 0;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* MOBILE PHONE */
+
+@media (min-width: 320px) and (max-width: 600px) {
+    header h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+    }
+    header nav {
+        width: 100%;
+        text-align: center;
+        padding: 1em 0;
+    }
+    header nav ul li {
+        font-size: 1em;
+        display: block;
+        line-height: 1.5em;
+        background-color: #333;
+        padding: 5px 5px;
+        margin: 5px 5px;
+    }
+    .main-title p,
+    .main-title h3,
+    .main-image {
+        padding: 0 10px;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    .section-one,
+    .section-two,
+    .section-three {
+        display: block;
+        width: 100%;
+        padding: 0 10px;
+        margin: 0;
+        border: 0;
+    }
+    .section-one {
+        padding-left: 40px;
+    }
+    h4 {
+        font-size: 3.5rem;
+    }
+}
