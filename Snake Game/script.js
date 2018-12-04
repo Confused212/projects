@@ -125,6 +125,7 @@ function updateSnakePosition() {
         }
         eaten = false;
     }
+    foodList.forEach(food);
     snakeList.forEach(snake);
     checkSnakePosition();
     updateSnakeList();
