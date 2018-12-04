@@ -1,6 +1,6 @@
 var snakeCanvas = document.querySelector('#snake-canvas').getContext('2d');
 
-var snakeList, foodList, direction;
+var snakeList, foodList, direction, eaten;
 var WIDTH = 500;
 var HEIGHT = 500;
 snakeCanvas.font = '20px Ariel';
@@ -98,9 +98,25 @@ function updateSnakeList() {
     }
 };
 
+function checkSnakePosition() {
+    if (snakeList[0].x > 500) {
+        snakeList[0].x = 0;
+    }
+    if (snakeList[0].x < 0) {
+        snakeList[0].x = 500;
+    }
+    if (snakeList[0].y > 500) {
+        snakeList[0].y = 0;
+    }
+    if (snakeList[0].y < 0) {
+        snakeList[0].y = 500;
+    }
+};
+
 function updateSnakePosition() {
     snakeCanvas.clearRect(0, 0, WIDTH, HEIGHT);
     snakeList.forEach(snake);
+    checkSnakePosition();
     updateSnakeList();
 };
 
