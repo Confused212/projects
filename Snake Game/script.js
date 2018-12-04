@@ -19,15 +19,17 @@ var snakeFood = {
 
 function snake(sb, i) {
     snakeCanvas.save();
-    if (i == 0) {
+    if (i == 0)
         snakeCanvas.fillStyle = 'black';
-    } else {
+    // add black head to body
+    else
+    // adds blocks tot the body
         snakeCanvas.fillStyle = snakeBody.color;
-        snakeCanvas.fillRect(sb.x, sb.y, snakeBody.width, snakeBody.height);
+    snakeCanvas.fillRect(sb.x, sb.y, snakeBody.width, snakeBody.height);
 
-        snakeCanvas.restore();
+    snakeCanvas.restore();
 
-    }
+
 };
 
 function food(f, i) {
