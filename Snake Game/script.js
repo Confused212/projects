@@ -115,6 +115,16 @@ function checkSnakePosition() {
 
 function updateSnakePosition() {
     snakeCanvas.clearRect(0, 0, WIDTH, HEIGHT);
+
+    while (eaten) {
+        var posx = Math.random() * 485 + 5;
+        var posy = Math.random() * 485 + 5;
+        foodList[0] = {
+            x: posx,
+            y: posy
+        }
+        eaten = false;
+    }
     snakeList.forEach(snake);
     checkSnakePosition();
     updateSnakeList();
@@ -129,6 +139,8 @@ function startGame() {
 
     foodList = [];
     direction = 99;
+    eaten = true;
+    // controls the speed of the snake
     setInterval(updateSnakePosition, 20);
 
 };
