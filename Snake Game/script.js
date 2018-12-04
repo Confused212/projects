@@ -32,10 +32,8 @@ function snake(sb, i) {
 
 function food(f, i) {
     snakeCanvas.save();
-
     snakeCanvas.fillStyle = snakeFood.color;
     snakeCanvas.fillRect(f.x, f.y, snakeFood.width, snakeFood.height);
-
     snakeCanvas.restore();
 };
 
