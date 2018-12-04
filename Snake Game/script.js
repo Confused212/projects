@@ -56,13 +56,13 @@ function food(f, i) {
     snakeCanvas.restore();
 };
 
-function updateSnake() {
+function updateSnakeList() {
     for (var i = snakeList.length - 1; i >= 0; i--) {
         // change the direction of the snake depending on what key you press
         if (direction == 0) {
             // left
             if (i == 0) {
-                snakeList[i].x = snakeList.x - 5;
+                snakeList[i].x = snakeList[i].x - 5;
             } else {
                 snakeList[i].x = snakeList[i - 1].x
                 snakeList[i].y = snakeList[i - 1].y
@@ -71,7 +71,7 @@ function updateSnake() {
         } else if (direction == 1) {
             // up
             if (i == 0) {
-                snakeList[i].y = snakeList.y - 5;
+                snakeList[i].y = snakeList[i].y - 5;
             } else {
                 snakeList[i].x = snakeList[i - 1].x
                 snakeList[i].y = snakeList[i - 1].y
@@ -79,8 +79,8 @@ function updateSnake() {
 
         } else if (direction == 2) {
             // right
-            if (i == 2) {
-                snakeList[i].x = snakeList.x + 5;
+            if (i == 0) {
+                snakeList[i].x = snakeList[i].x + 5;
             } else {
                 snakeList[i].x = snakeList[i - 1].x
                 snakeList[i].y = snakeList[i - 1].y
@@ -88,14 +88,20 @@ function updateSnake() {
 
         } else if (direction == 3) {
             // down
-            if (i == 3) {
-                snakeList[i].y = snakeList.y + 5;
+            if (i == 0) {
+                snakeList[i].y = snakeList[i].y + 5;
             } else {
                 snakeList[i].x = snakeList[i - 1].x
                 snakeList[i].y = snakeList[i - 1].y
             }
         }
     }
+};
+
+function updateSnakePosition() {
+    snakeCanvas.clearRect(0, 0, WIDTH, HEIGHT);
+    snakeList.forEach(snake);
+    updateSnakeList();
 };
 
 function startGame() {
@@ -107,8 +113,8 @@ function startGame() {
 
     foodList = [];
     direction = 99;
+    setInterval(updateSnakePosition, 20);
 
-    snakeList.forEach(snake);
 };
 
 startGame();
