@@ -49,6 +49,13 @@ function snake(sb, i) {
 
 };
 
+function foodCollect(rect1, rect2) {
+    return ((rect1.x <= rect2.x + food.width) &&
+        (rect2.x <= rect1.x + snakeBody.width) &&
+        (rect1.y <= rect2.y + food.height) &&
+        (rect2.y <= rect1.y + snakeBody.height));
+};
+
 function food(f, i) {
     snakeCanvas.save();
     snakeCanvas.fillStyle = snakeFood.color;
@@ -127,6 +134,27 @@ function updateSnakePosition() {
     }
     foodList.forEach(food);
     snakeList.forEach(snake);
+
+    if (foodCollect(snakeList[0], foodList[0])) {
+        foodList = [];
+        eaten = true;
+        var bodyx, bodyy;
+        if (direction == 0) {
+            bodyx = snakeList[0].x - 10;
+            bodyy = snakeList[0].y;
+        } else if (direction == 1) {
+            bodyx = snakeList[0].x;
+            bodyy = snakeList[0].y - 10;
+        } else if (direction == 2) {
+            bodyx = snakeList[0].x + 10;
+            bodyy = snakeList[0].y;
+        } else if (direction == 3) {
+            bodyx = snakeList[0].x;
+            bodyy = snakeList[0].y + 10;
+        }
+        snakeList.unshift({ x: bodyx, y: bodyy });
+    }
+
     checkSnakePosition();
     updateSnakeList();
 };
