@@ -1,9 +1,10 @@
 var snakeCanvas = document.querySelector('#snake-canvas').getContext('2d');
 
-var snakeList, foodList, direction, eaten;
+var snakeList, foodList, direction, eaten, gameOver, score, playing;
 var WIDTH = 500;
 var HEIGHT = 500;
 snakeCanvas.font = '20px Ariel';
+snakeCanvas.fillText('Press Here To Start!!', 140, 250);
 
 var snakeBody = {
     width: 20,
@@ -17,21 +18,34 @@ var snakeFood = {
     color: 'blue'
 };
 
+document.querySelector('#snake-canvas').onmousedown = function() {
+    if (playing)
+        clearInterval(gameOver);
+    startGame();
+
+
+};
+
 document.onkeydown = function(event) {
 
-    if (event.keyCode == 37) {
+    if (event.keyCode == 37 && direction != 2) {
         // if direction - 0 = left
         direction = 0;
-    } else if (event.keyCode == 38) {
+    } else if (event.keyCode == 38 && direction != 3) {
         // if direction - 1 = up
         direction = 1;
-    } else if (event.keyCode == 39) {
+    } else if (event.keyCode == 39 && direction != 0) {
         // if direction - 2 = right
         direction = 2;
-    } else if (event.keyCode == 40) {
+    } else if (event.keyCode == 40 && direction != 1) {
         // if direction - 3 = down
         direction = 3;
     }
+};
+
+function snakeCollision(snake1, snake2) {
+    return ((Math.abs(snake1.x - snake2.x) < 5) &&
+        (Math.abs(snake1.y - snake2.y) < 5));
 };
 
 function snake(sb, i) {
@@ -45,14 +59,12 @@ function snake(sb, i) {
     snakeCanvas.fillRect(sb.x, sb.y, snakeBody.width, snakeBody.height);
 
     snakeCanvas.restore();
-
-
 };
 
 function foodCollect(rect1, rect2) {
-    return ((rect1.x <= rect2.x + food.width) &&
+    return ((rect1.x <= rect2.x + snakeFood.width) &&
         (rect2.x <= rect1.x + snakeBody.width) &&
-        (rect1.y <= rect2.y + food.height) &&
+        (rect1.y <= rect2.y + snakeFood.height) &&
         (rect2.y <= rect1.y + snakeBody.height));
 };
 
@@ -120,6 +132,19 @@ function checkSnakePosition() {
     }
 };
 
+function isGameOver() {
+    for (i in snakeList) {
+        if (i == 0) {
+            continue;
+            if (snakeCollision(snakeList[0], snakeList[i])) {
+                clearInterval(gameOver);
+                snakeCanvas.fillText('GAME OVER!!! click to start again.')
+                return;
+            }
+        }
+    }
+};
+
 function updateSnakePosition() {
     snakeCanvas.clearRect(0, 0, WIDTH, HEIGHT);
 
@@ -138,6 +163,7 @@ function updateSnakePosition() {
     if (foodCollect(snakeList[0], foodList[0])) {
         foodList = [];
         eaten = true;
+        score += 1;
         var bodyx, bodyy;
         if (direction == 0) {
             bodyx = snakeList[0].x - 10;
@@ -154,7 +180,8 @@ function updateSnakePosition() {
         }
         snakeList.unshift({ x: bodyx, y: bodyy });
     }
-
+    snakeCanvas.fillText('Score: ' + score, 420, 30);
+    isGameOver();
     checkSnakePosition();
     updateSnakeList();
 };
@@ -169,9 +196,9 @@ function startGame() {
     foodList = [];
     direction = 99;
     eaten = true;
+    score = 0;
+    playing = true;
     // controls the speed of the snake
-    setInterval(updateSnakePosition, 20);
+    gameOver = setInterval(updateSnakePosition, 20);
 
 };
-
-startGame();
