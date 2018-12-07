@@ -1,0 +1,233 @@
+/**************** 
+Over all Styles
+*****************/
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/*************** 
+Standard styles
+***************/
+
+body {
+    max-width: 1200px;
+    font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-family: 'Unlock', cursive;
+}
+
+h2,
+h3 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 10px
+}
+
+h2 {
+    position: relative;
+}
+
+h2::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    margin: 0 300px;
+    height: 1px;
+    border-bottom: 2px solid #f40606;
+    content: ""
+}
+
+p {
+    font-family: 'Noto Serif TC', serif;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 30%;
+}
+
+.container {
+    background-color: #f5f2f2;
+}
+
+
+/*************** 
+float 
+***************/
+
+#images {
+    margin-top: 10px;
+}
+
+.row {
+    float: left;
+    margin: 0 auto;
+}
+
+.half {
+    width: 50%;
+}
+
+#images,
+#more-info {
+    clear: both;
+}
+
+
+/********* 
+Links
+*********/
+
+a:hover {
+    border-bottom: 2px dotted #f40606;
+    height: 100%;
+}
+
+a:visited {
+    color: #f0ffff;
+}
+
+
+/********* 
+Nav Bar
+*********/
+
+nav {
+    height: 60px;
+    background-color: #a77b0d;
+    border: 2px solid #fea602;
+    text-transform: uppercase;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: .9em;
+    padding-bottom: 5px;
+}
+
+nav ul {
+    text-align: right;
+    padding: 20px 10px 0 0;
+}
+
+nav li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.logo {
+    float: left;
+    height: 140px;
+    width: 140px;
+    padding-top: 8px;
+    padding-left: 30px;
+}
+
+.logo a {
+    border: none;
+}
+
+h4 {
+    float: left;
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 22px;
+    margin-left: 200px;
+}
+
+#check-boxes {
+    float: left;
+    padding-top: 20px;
+}
+
+
+/**************** 
+Main Image
+****************/
+
+#background-picture {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/oldskool-photography-152258-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+}
+
+#background-picture h1 {
+    font-size: 2em;
+    color: #f0ffff;
+    padding-top: 150px;
+    padding-left: 30px;
+}
+
+h1 span {
+    color: #f40606;
+    font-weight: 900;
+}
+
+
+/**************** 
+Information
+****************/
+
+#info p {
+    border: 1px solid #c4c4c4;
+}
+
+
+/**************** 
+picture bank
+****************/
+
+#images img {
+    float: left;
+    width: 33.3%;
+}
+
+#images h2 {
+    padding-top: 10px;
+}
+
+
+/**************** 
+More Info
+****************/
+
+#more-info h3 {
+    padding-top: 20px;
+}
+
+
+/**************** 
+Buttons
+****************/
+
+#buttons {
+    text-align: center;
+    word-spacing: 20px;
+}
+
+#add,
+#remove {
+    text-transform: uppercase;
+    border-style: groove;
+    padding: 15px;
+    border-radius: 40px;
+    background: #f40606;
+    border: #000000;
+    outline: none;
+}
+
+#add {
+    width: 80px;
+}

@@ -22,12 +22,10 @@ document.querySelector('#snake-canvas').onmousedown = function() {
     if (playing)
         clearInterval(gameOver);
     startGame();
-
-
 };
 
 document.onkeydown = function(event) {
-
+    // snake shouldn't be able to go back on its self
     if (event.keyCode == 37 && direction != 2) {
         // if direction - 0 = left
         direction = 0;
@@ -138,7 +136,7 @@ function isGameOver() {
             continue;
             if (snakeCollision(snakeList[0], snakeList[i])) {
                 clearInterval(gameOver);
-                snakeCanvas.fillText('GAME OVER!!! click to start again.')
+                snakeCanvas.fillText('GAME OVER!!! click to start again.', 150, 250)
                 return;
             }
         }
