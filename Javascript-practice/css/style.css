@@ -47,9 +47,9 @@ h2::after {
 }
 
 p {
-    font-family: 'Noto Serif TC', serif;
     padding: 5px 10px;
     margin-bottom: 20px;
+    overflow: scroll;
 }
 
 img {
@@ -143,28 +143,49 @@ h4 {
     float: left;
     text-align: center;
     padding-right: 20px;
-    padding-top: 22px;
-    margin-left: 200px;
+    padding-top: 24px;
+    margin-left: 180px;
 }
 
-#check-boxes {
+#dropdown {
     float: left;
     padding-top: 20px;
+}
+
+select {
+    background: transparent;
+    width: 170px;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 1em;
+    padding-bottom: 2px;
+    color: #fff;
+    line-height: 1;
+    border: 3px solid #fea602;
+    border-radius: 0;
+    height: 28px;
+    outline: none;
+}
+
+
+/* for use in javascript */
+
+.option0 {
+    font-family: 'Noto Serif TC', serif;
 }
 
 .option1 {
     font-family: 'El Messiri', sans-serif;
 }
 
-.option1 {
+.option2 {
     font-family: 'Lobster', cursive;
 }
 
-.option1 {
+.option3 {
     font-family: 'Charmonman', cursive;
 }
 
-.option1 {
+.option4 {
     font-family: 'Dokdo', cursive;
 }
 
