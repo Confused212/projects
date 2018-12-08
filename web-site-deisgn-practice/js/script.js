@@ -100,37 +100,49 @@ document.getElementById('font').addEventListener('change', function() {
 //     }, 1000);
 // });
 
-// hide / show map
-
+//show map
 
 btnAdd.addEventListener('click', function() {
 
     // hide the form
     formHide.classList.add('hide');
-    formHide.classList.remove('fade-in');
-    formHide.classList.add('fade-out');
 
     // show the map
     mapShow.classList.remove('hide');
-    mapShow.classList.remove('fade-out');
-    mapShow.classList.add('fade-in');
 
 });
 
+// fade in map
+$(document).ready(function() {
+    $("#add").click(function() {
+        $("form").fadeOut()
+    });
+    $("#add").click(function() {
+        $("#fade").fadeIn(700);
+    });
+});
+
+// show fieldset
 btnRemove.addEventListener('click', function() {
 
     // show the form
     formHide.classList.remove('hide');
-    formHide.classList.remove('fade-out');
-    formHide.classList.add('fade-in');
-
 
     // hide the map
     mapShow.classList.add('hide');
-    mapShow.classList.add('fade-out');
-    mapShow.classList.remove('fade-in');
 
 });
+
+// fade-in fieldset
+$(document).ready(function() {
+    $("#remove").click(function() {
+        $("#fade").fadeOut()
+    });
+    $("#remove").click(function() {
+        $("form").fadeIn(1000);
+    });
+});
+
 
 // remove styling from show button 
 btnAdd.addEventListener('mousedown', function() {
@@ -158,4 +170,16 @@ btnRemove.addEventListener('mousedown', function() {
 btnRemove.addEventListener('mouseup', function() {
     document.querySelector('input[name=btn-hide]').classList.add('btn-up')
     document.querySelector('input[name=btn-hide]').classList.remove('btn-dwn')
+});
+
+document.querySelector('input[name=btn-form]').addEventListener('mousedown', function() {
+    document.querySelector('input[name=btn-form]').classList.add('btn-down');
+    document.querySelector('input[name=btn-form]').classList.remove('btn-up');
+
+});
+
+document.querySelector('input[name=btn-form]').addEventListener('mouseup', function() {
+    document.querySelector('input[name=btn-form]').classList.remove('btn-down');
+    document.querySelector('input[name=btn-form]').classList.add('btn-up');
+
 });
