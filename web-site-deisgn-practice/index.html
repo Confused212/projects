@@ -11,26 +11,29 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <div class="logo">
-            <a href="#"><img src="imgs/santa-0.png" alt="Santa" class="santa"></a>
-        </div>
+    <div id="top"></div>
+    <nav class="nav-bar" id="nav">
+        <div class="full">
+            <div class="logo">
+                <a href="#top"><img src="imgs/santa-0.png" alt="Santa" class="santa"></a>
+            </div>
 
-        <h4>choose your paragraph font:</h4>
-        <div id="dropdown">
-            <select id="font" name="font">
-                    <option value="Noto Serif TC, serif" name="choice0" selected="selected">Choose</option>
-                    <option value="El Messiri, sans-serif" name="choice1">El Messiri</option>
-                    <option value="Lobster, cursive" name="choice2">Lobster</option>
-                    <option value="Charmonman, cursive" name="choice3">Charmonman</option>
-                    <option value="Dokdo, cursive" name="choice4">Dokdo</option>
-            </select>
+            <h4>choose your paragraph font:</h4>
+            <div id="dropdown">
+                <select id="font" name="font">
+                        <option value="Noto Serif TC, serif" name="choice0" selected="selected">Choose</option>
+                        <option value="El Messiri, sans-serif" name="choice1">El Messiri</option>
+                        <option value="Lobster, cursive" name="choice2">Lobster</option>
+                        <option value="Charmonman, cursive" name="choice3">Charmonman</option>
+                        <option value="Dokdo, cursive" name="choice4">Dokdo</option>
+                </select>
+            </div>
+            <ul>
+                <li><a href="#info">about</a></li>
+                <li><a href="#form">contact</a></li>
+                <li><a href="#more-info">info</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-            <li><a href="#">info</a></li>
-        </ul>
     </nav>
 
     <div id="background-picture">
@@ -38,7 +41,7 @@
     </div>
 
     <div id="info">
-        <div class="container">
+        <div class="full">
             <h2>Information</h2>
 
             <div class="row half">
@@ -80,21 +83,23 @@
     </div>
 
     <div id="images">
-        <h2>See some more</h2>
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-        <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+        <div class="full">
+            <h2>See some more</h2>
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+        </div>
     </div>
 
 
     <div id="more-info">
-        <div class="container">
+        <div class="full">
             <h2>Get to know more</h2>
             <div class="row half">
                 <p class="option0">
@@ -118,7 +123,7 @@
         </label>
     </div>
 
-    <form action="" class="form">
+    <form action="" class="form" id="form">
         <fieldset>
             <legend>Contact Information</legend>
             <label for="username">UserName :
