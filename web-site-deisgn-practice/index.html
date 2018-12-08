@@ -21,7 +21,7 @@
             <h4>choose your paragraph font:</h4>
             <div id="dropdown">
                 <select id="font" name="font">
-                        <option value="Noto Serif TC, serif" name="choice0" selected="selected">Choose</option>
+                        <option value="Noto Serif TC, serif" name="choice0" selected="selected">Standard</option>
                         <option value="El Messiri, sans-serif" name="choice1">El Messiri</option>
                         <option value="Lobster, cursive" name="choice2">Lobster</option>
                         <option value="Charmonman, cursive" name="choice3">Charmonman</option>
@@ -31,7 +31,7 @@
             <ul>
                 <li><a href="#info">about</a></li>
                 <li><a href="#form">contact</a></li>
-                <li><a href="#more-info">info</a></li>
+                <li><a href="#more-info">more</a></li>
             </ul>
         </div>
     </nav>
@@ -85,15 +85,33 @@
     <div id="images">
         <div class="full">
             <h2>See some more</h2>
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
-            <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl" srcset="">
+            <a href="#images" id="pic-1">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-2">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-3">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-4">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-5">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-6">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-7">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-8">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
+            <a href="#images" id="pic-9">
+                <img src="imgs/kal-loftus-592091-unsplash.jpg" alt="girl">
+            </a>
         </div>
     </div>
 
@@ -115,13 +133,17 @@
     </div>
 
     <div id="buttons">
-        <label for="add">
-            <input type="button" value="add" id="add">
+        <label for="show">
+            <input name="btn-show" type="button" value="Show" id="add" class="btn-up">
         </label>
-        <label for="remove">
-            <input type="button" value="remove" id="remove"> <br>
+        <label for="hide">
+            <input name="btn-hide" type="button" value="Hide" id="remove" class="btn-up"> <br>
         </label>
     </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8524.053909118684!2d-3.3022087491603793!3d57.71622879797922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488509515c6ce715%3A0x557673eae5cf6e6!2sLossiemouth%2C+UK!5e0!3m2!1sen!2ssa!4v1544265164297"
+        width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="hide">
+    </iframe>
 
     <form action="" class="form" id="form">
         <fieldset>
@@ -151,6 +173,7 @@
         <a href="http://"><i class="fab fa-facebook-square"></i></a>
         <a href="http://"><i class="fab fa-instagram"></i></a>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 

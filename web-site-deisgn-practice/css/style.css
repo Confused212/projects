@@ -5,6 +5,7 @@ Over all Styles
 * {
     margin: 0 auto;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 
@@ -88,13 +89,13 @@ float
 Links
 *********/
 
-a:hover {
+ul a:hover {
     border-bottom: 3px solid #fea602;
     height: 100%;
     transition: 0.5s;
 }
 
-a:visited {
+ul a:visited {
     color: #f0ffff;
 }
 
@@ -168,19 +169,6 @@ select {
 }
 
 
-/* sticky nav-bar */
-
-.stick .nav-bar {
-    position: fixed;
-    top: 0;
-    z-index: 999;
-}
-
-.sticky+#background-picture {
-    padding-top: 60px;
-}
-
-
 /**************** 
 Main Image
 ****************/
@@ -189,6 +177,7 @@ Main Image
     background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/oldskool-photography-152258-unsplash.jpg);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     height: 700px;
     padding-top: 16px;
 }
@@ -196,7 +185,7 @@ Main Image
 #background-picture h1 {
     font-size: 2em;
     color: #f0ffff;
-    padding-top: 150px;
+    padding-top: 200px;
     padding-left: 30px;
 }
 
@@ -221,11 +210,23 @@ picture bank
 
 #images img {
     float: left;
-    width: 33.3%;
+    width: 33%;
 }
 
 #images h2 {
     padding-top: 10px;
+}
+
+
+/* picture animation */
+
+img {
+    transition: -webkit-transform 0.30s ease;
+}
+
+img:active {
+    -webkit-transform: scale(2);
+    transform: scale(2);
 }
 
 
@@ -252,7 +253,6 @@ Buttons
 .form input[type=button] {
     background: #f40606;
     border: 3px solid #fea602;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     border-radius: 40px;
     text-transform: uppercase;
     font-family: 'Anton', sans-serif;
@@ -270,10 +270,22 @@ Buttons
     transition: 0.5s;
 }
 
-.click-button {
+.btn-dwn {
     box-shadow: none;
-    background: #f40606;
-    border: 4px solid #000;
+}
+
+.btn-up {
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+
+/**************** 
+Iframe
+****************/
+
+iframe {
+    width: 60%;
+    margin-left: 238px;
 }
 
 
@@ -328,8 +340,46 @@ footer {
     text-align: center;
 }
 
+a {
+    border: none;
+}
+
 i {
     font-size: 40px;
     letter-spacing: 20px;
     color: #fea602;
+}
+
+
+/**************** 
+Javascript Classes
+****************/
+
+
+/* sticky nav-bar */
+
+.stick .nav-bar {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.sticky+#background-picture {
+    padding-top: 60px;
+}
+
+.hide {
+    display: none;
+}
+
+.fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
 }

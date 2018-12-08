@@ -1,6 +1,11 @@
 var santaLogo = document.querySelector('.santa');
 var checked = document.querySelector('#dropdown');
-var navScroll = document.querySelector('.nav-bar')
+var navScroll = document.querySelector('.nav-bar');
+var btnAdd = document.querySelector('#add');
+var btnRemove = document.querySelector('#remove');
+var mapShow = document.querySelector('iframe');
+var formHide = document.querySelector('fieldset');
+var btnChange = document.querySelector('#buttons');
 
 // santa logo to spin when clicked
 santaLogo.addEventListener('mousedown', function() {
@@ -85,4 +90,72 @@ document.getElementById('font').addEventListener('change', function() {
     window.addEventListener('scroll', stick)
 })()
 
-// smooth scroll
+// smooth scroll using JQuery instead of CSS
+
+// $(document).on('click', 'a[href^="#"]', function(event) {
+//     event.preventDefault();
+
+//     $('html, body').animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top
+//     }, 1000);
+// });
+
+// hide / show map
+
+
+btnAdd.addEventListener('click', function() {
+
+    // hide the form
+    formHide.classList.add('hide');
+    formHide.classList.remove('fade-in');
+    formHide.classList.add('fade-out');
+
+    // show the map
+    mapShow.classList.remove('hide');
+    mapShow.classList.remove('fade-out');
+    mapShow.classList.add('fade-in');
+
+});
+
+btnRemove.addEventListener('click', function() {
+
+    // show the form
+    formHide.classList.remove('hide');
+    formHide.classList.remove('fade-out');
+    formHide.classList.add('fade-in');
+
+
+    // hide the map
+    mapShow.classList.add('hide');
+    mapShow.classList.add('fade-out');
+    mapShow.classList.remove('fade-in');
+
+});
+
+// remove styling from show button 
+btnAdd.addEventListener('mousedown', function() {
+
+    document.querySelector('input[name=btn-show]').classList.remove('btn-up');
+    document.querySelector('input[name=btn-show]').classList.add('btn-dwn');
+
+});
+
+btnAdd.addEventListener('mouseup', function() {
+
+    document.querySelector('input[name=btn-show]').classList.add('btn-up');
+    document.querySelector('input[name=btn-show]').classList.remove('btn-dwn');
+
+});
+
+// remove styling from hide button 
+
+btnRemove.addEventListener('mousedown', function() {
+
+    document.querySelector('input[name=btn-hide]').classList.remove('btn-up')
+    document.querySelector('input[name=btn-hide]').classList.add('btn-dwn')
+});
+
+btnRemove.addEventListener('mouseup', function() {
+    document.querySelector('input[name=btn-hide]').classList.add('btn-up')
+    document.querySelector('input[name=btn-hide]').classList.remove('btn-dwn')
+});
