@@ -51,7 +51,6 @@ h2::after {
 p {
     padding: 5px 10px;
     margin-bottom: 40px;
-    overflow: scroll;
     word-spacing: 2px;
     font-size: 1.2em;
 }
@@ -75,7 +74,7 @@ float
 }
 
 .container {
-    width: 1200px
+    width: 1200px;
 }
 
 .full {
@@ -213,8 +212,13 @@ Information
 mobile
 ***************/
 
+#mobile {
+    background-color: #f0ffff;
+}
+
 #mobile img {
     width: 50%;
+    margin-left: 40px;
 }
 
 #mobile .btn-app img {
