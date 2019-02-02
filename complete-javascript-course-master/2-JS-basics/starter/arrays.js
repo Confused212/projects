@@ -64,3 +64,100 @@ mixed.unshift(1990);
 // var modified = mixed.slice(1, 4); // does not change the original array
 // console.log(mixed);
 // console.log(modified);
+
+
+// function reverse(arr) {
+//     for (var i = arr.length - 1; i >= 0; i--) {
+//         // console.log(arr[i]);
+//     }
+// };
+
+// reverse([1, 3, 5, 7, 4]);
+
+// function isUniform(arr) {
+//     var check = arr[0];
+//     for (var i = 1; i < arr.length; i++) {
+//         if (arr[i] !== check) {
+//             return false;
+//         } else {
+//             return true;
+//         }
+//     }
+//     return check;
+// };
+
+// console.log(isUniform([1, 1, 1, 1]));
+
+// function add(arr) {
+//     var sum = 0;
+//     arr.forEach(function(el) {
+//         sum += el;
+//     });
+//     return sum;
+// };
+
+// console.log(add([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+// function findMax(arr) {
+//     var max = arr[0];
+//     for (var i = 1; i < arr.length; i++) {
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//     }
+//     return max;
+// }
+
+// console.log(findMax([2, 3, 30, 2, 10, 2]));
+
+/**
+ * print array in reverse on single line
+ * is uniform returns true when all items match and false if not
+ * sum of the array so add all together and get the total
+ * find the max number of an array
+ * create a star triangle
+ * print fizz buzz or fizznbuzz depending on the number
+ * chess board
+ */
+
+// print array in reverse on single line
+
+
+// is uniform returns true when all items match and false if not
+
+
+// sum of the array so add all together and get the total
+
+// for each loop
+
+
+
+
+// for loop 
+
+
+
+// console.log(add([1, 3, 5, 5, 6, 7]));
+
+//find the max number of an array
+
+
+// console.log(findMax([1, 2, 3, 1, 2, 1, 1, 2, 6]));
+// create a star triangle
+
+
+
+// print fizz buzz or fizznbuzz depending on the number
+
+
+// chess board
+
+
+/**
+ * create an array of movies
+ * each movie should have:
+ * 1, a title rating
+ * 2, haswatched properties
+ * 3, star ratings
+ * itterate through the array and print out a string
+ */

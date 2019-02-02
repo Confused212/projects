@@ -57,3 +57,14 @@
 //         console.log('it must be a day of!!!');
 //         break;
 // };
+
+// for each loop
+
+var go = [12, 42, 56, 32, 16, 93];
+var num = 0;
+
+function add(nums) {
+    num += go;
+}
+go.forEach(add);
+console.log(num);
