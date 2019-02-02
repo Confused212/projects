@@ -61,10 +61,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         }
 
         if (playerScore[activePlayer] >= winScore) {
+            hideDice()
             document.getElementById('name-' + activePlayer).textContent = 'Winner!!!';
-            document.getElementById('dice-pink').style.display = 'none';
-            document.getElementById('dice-green').style.display = 'none';
-
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             playing = false;
@@ -77,21 +75,31 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 document.querySelector('.btn-new').addEventListener('click', init);
 
-function init() {
+function hideDice() {
+    document.getElementById('dice-pink').style.display = 'none';
+    document.getElementById('dice-green').style.display = 'none';
+}
 
+function init() {
+    // reset all scores to zero
     playerScore = [0, 0]
     currentTotal = 0;
     activePlayer = 0;
     playing = true;
-    document.getElementById('dice-pink').style.display = 'none';
-    document.getElementById('dice-green').style.display = 'none';
 
+    // hide the dice
+    hideDice()
+
+    // update UI with reset score
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
+    // change player names back 
     document.getElementById('name-0').textContent = 'Player 1';
     document.getElementById('name-1').textContent = 'Player 2';
+
+    // reset classes 
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('active');
@@ -109,8 +117,7 @@ function nextPlayer() {
     document.getElementById('current-1').textContent = '0';
 
     // hide the dice;
-    document.getElementById('dice-pink').style.display = 'none';
-    document.getElementById('dice-green').style.display = 'none';
+    hideDice()
 
     // change active player
     document.querySelector('.player-0-panel').classList.toggle('active');
