@@ -220,7 +220,7 @@
 // this IIFE is being used with a console.log to get the results
 // from the function to the console from within the function
 (function confused(a, b) {
-    console.log(a + b);
+    // console.log(a + b);
 })(1, 2);
 
 // this function was created using a variable to store the results
@@ -229,4 +229,35 @@ var easy = (function num(a, b) {
     return a * b;
 })(2, 3);
 
-console.log(easy);
+// console.log(easy);
+
+// call backs / passing a function as an argument
+
+var birthYear = [1992, 2004, 1995, 1983, 2018, 1973];
+
+function arrayCalc(arr, fn) {
+    var hold = [];
+    for (var i = 0; i < arr.length; i++) {
+        hold.push(fn(arr[i]))
+    }
+    return hold;
+};
+
+function calcAge(el) {
+    return 2019 - el;
+};
+
+function fullAge(el) {
+    return el >= 18;
+
+    // if (el >= 18) {
+    //     return true;
+    // }
+    // return false;
+}
+
+var ages = arrayCalc(birthYear, calcAge);
+var isLegal = arrayCalc(ages, fullAge);
+
+console.log(ages);
+console.log(isLegal);
