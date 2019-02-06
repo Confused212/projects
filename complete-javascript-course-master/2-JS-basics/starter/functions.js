@@ -259,5 +259,40 @@ function fullAge(el) {
 var ages = arrayCalc(birthYear, calcAge);
 var isLegal = arrayCalc(ages, fullAge);
 
+// console.log(ages);
+// console.log(isLegal);
+
+var dogBirthYear = [1992, 2004, 1995, 1983, 2018, 1973];
+
+function calcAge(arr, fn) {
+    var numStore = [];
+    for (var i = 0; i < arr.length; i++) {
+        numStore.push(fn(arr[i]))
+    }
+    return numStore;
+};
+
+function dogAge(el) {
+    return 2019 - el;
+};
+
+function dogYears(el) {
+    return el * 7;
+};
+
+function str(el) {
+    if (el <= 10) {
+        return 'Just a puppy';
+    } else if (el <= 18) {
+        return 'A play full, good boy';
+    }
+    return 'Hes an old boy now';
+}
+
+var ages = calcAge(dogBirthYear, dogAge);
+var years = calcAge(ages, dogYears);
+var goodBoy = calcAge(ages, str);
+
 console.log(ages);
-console.log(isLegal);
+console.log(years);
+console.log(goodBoy);

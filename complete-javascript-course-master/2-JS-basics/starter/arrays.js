@@ -119,17 +119,20 @@ mixed.unshift(1990);
  */
 
 // print array in reverse on single line
+
 function rev(arr) {
-    for (var i = arr.length; i > 0; i--) {
-        // console.log(i);
+    for (var i = arr.length - 1; i >= 0; i--) {
+        // console.log(arr[i]);
     }
 }
+
 rev([1, 2, 3, 4, 5]);
 
 // is uniform returns true when all items match and false if not
+
 function uni(arr) {
     var match = arr[0];
-    for (var i = 1; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if (arr[i] !== match) {
             return false;
         }
@@ -137,86 +140,73 @@ function uni(arr) {
     return true;
 };
 
-// console.log(uni([1, 1, 1, 1, 1]));
+// console.log(uni([1, 1, 1, 1]));
 
 // sum of the array so add all together and get the total
 
 
 // for each loop
+// function add(arr) {
+//     var num = 0;
+//     arr.forEach(function(el) {
+//         num += el;
+//     });
+//     return num;
+// }
 
-function add(arr) {
-    var plus = 0;
-    arr.forEach(function(arr) {
-        plus += arr
-    })
-    return plus;
-};
-
-// console.log(add([1, 2, 3, 4, 5]));
+// console.log(add([1, 2, 5, 4, 5]));
 
 // for loop 
 
 function add(arr) {
-    var plus = 0;
+    var num = 0;
     for (var i = 0; i < arr.length; i++) {
-        plus += arr[i];
+        num += arr[i];
     }
-    return plus;
-};
+    return num;
+}
 
 // console.log(add([1, 2, 3, 4, 5]));
+
 
 
 
 //find the max number of an array
 function max(arr) {
-    var add = arr[0];
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] >= add) {
-            add = arr[i];
+    var top = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] >= top) {
+            top = arr[i];
         }
     }
-    return add;
-}
+    return top;
+};
 
-// console.log(max([1, 2, 4, 1, 2, 6, 2, 2]));
+// console.log(max([1, 2, 5, 1, 2, 7, 10]));
+
 // create a star triangle
 var tri = '';
 for (var i = 0; i < 8; i++) {
-    // console.log(tri += '^');
+    // console.log(tri += '*');
 }
 
 
 // print fizz buzz or fizznbuzz depending on the number
-// for (var i = 0; i <= 100; i++) {
-//     if (i % 15 == 0) {
-//         console.log('Fizz-Buzz');
-//     } else if (i % 3 == 0) {
-//         console.log('Fizz');
-//     } else if (i % 5 == 0) {
-//         console.log('Buzz');
-//     } else {
-//         console.log(i)
-//     }
-// }
 
 // chess board
 var size = 8;
 var board = '';
-
 for (var i = 0; i < size; i++) {
     for (var j = 0; j < size; j++) {
-        if ((i + j) % 2 === 0) {
+        if ((i + j) % 2 == 0) {
             board += ' ';
         } else {
             board += '#';
         }
     }
-    board += '\n'
+    board += '\n';
 }
-
-// console.log(board);
-
+console.log(board);
 /**
  * create an array of movies
  * each movie should have:
@@ -225,35 +215,3 @@ for (var i = 0; i < size; i++) {
  * 3, star ratings
  * itterate through the array and print out a string
  */
-
-var movies = [{
-        title: 'lost',
-        hasSeen: true,
-        stars: 5
-    },
-    {
-        title: 'confused',
-        hasSeen: false,
-        stars: 'TBC'
-    },
-    {
-        title: 'between',
-        hasSeen: true,
-        stars: 3.5
-    }
-];
-
-movies.forEach(function(movie) {
-    // console.log(buildString(movie));
-});
-
-function buildString(movie) {
-    var string = `I have `;
-    if (movie.hasSeen) {
-        string += `watched `
-    } else {
-        string += `not watched `
-    }
-    string += `"${movie.title}" stars - ${movie.stars}`;
-    return string;
-};
