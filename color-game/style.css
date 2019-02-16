@@ -1,5 +1,5 @@
 body {
-    background-color: #fae8bb;
+    background-color: #232323;
     margin: 0;
     font-family: "Monserrat", "Avenir";
 }
@@ -8,8 +8,8 @@ body {
     background-color: blue;
     border-radius: 20%;
     transition: background 0.7s;
-    width: 180px;
-    height: 180px;
+    width: 30%;
+    padding-bottom: 30%;
     float: left;
     margin: 1.66%;
     -webkit-transition: background 0.7s;

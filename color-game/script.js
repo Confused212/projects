@@ -46,7 +46,7 @@ function squaresLoop() {
 
             } else {
                 //change background color to colorChoice
-                this.style.backgroundColor = 'rgb(250, 232, 187)';
+                this.style.backgroundColor = '#232323';
                 messageDisplay.textContent = 'Incorrect';
             }
         });

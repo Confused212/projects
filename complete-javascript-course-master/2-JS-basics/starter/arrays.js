@@ -119,94 +119,77 @@ mixed.unshift(1990);
  */
 
 // print array in reverse on single line
-
 function rev(arr) {
-    for (var i = arr.length - 1; i >= 0; i--) {
+    for (var i = arr.length - 1; i > 0; i--) {
         // console.log(arr[i]);
     }
-}
-
+};
 rev([1, 2, 3, 4, 5]);
 
-// is uniform returns true when all items match and false if not
 
-function uni(arr) {
+// is uniform returns true when all items match and false if not
+function uniform(arr) {
     var match = arr[0];
-    for (var i = 0; i < arr.length; i++) {
+    for (var i = 1; i < arr.length; i++) {
         if (arr[i] !== match) {
             return false;
         }
     }
     return true;
-};
-
-// console.log(uni([1, 1, 1, 1]));
+}
+// console.log(uniform([1, 2, 1]));
 
 // sum of the array so add all together and get the total
-
-
 // for each loop
 // function add(arr) {
-//     var num = 0;
+//     var sum = 0;
 //     arr.forEach(function(el) {
-//         num += el;
-//     });
-//     return num;
+//         sum += el;
+//     })
+//     return sum;
 // }
-
-// console.log(add([1, 2, 5, 4, 5]));
+// console.log(add([1, 2, 3, 4, 5, 6]));
 
 // for loop 
 
 function add(arr) {
-    var num = 0;
+    var sum = 0;
     for (var i = 0; i < arr.length; i++) {
-        num += arr[i];
+        sum += arr[i];
     }
-    return num;
+    return sum;
 }
-
-// console.log(add([1, 2, 3, 4, 5]));
+// console.log(add([1, 2, 3, 4, 5, 6]));
 
 
 
 
 //find the max number of an array
 function max(arr) {
-    var top = arr[0];
+    var biggest = arr[0];
     for (var i = 1; i < arr.length; i++) {
-        if (arr[i] >= top) {
-            top = arr[i];
+        if (arr[i] > biggest) {
+            biggest = arr[i];
         }
     }
-    return top;
-};
+    return biggest;
+}
+// console.log(max([1, 2, 3, 4, 5, 1]));
 
-// console.log(max([1, 2, 5, 1, 2, 7, 10]));
 
 // create a star triangle
+
 var tri = '';
+
 for (var i = 0; i < 8; i++) {
-    // console.log(tri += '*');
+    // console.log(tri += '^');
 }
 
 
 // print fizz buzz or fizznbuzz depending on the number
 
 // chess board
-var size = 8;
-var board = '';
-for (var i = 0; i < size; i++) {
-    for (var j = 0; j < size; j++) {
-        if ((i + j) % 2 == 0) {
-            board += ' ';
-        } else {
-            board += '#';
-        }
-    }
-    board += '\n';
-}
-console.log(board);
+
 /**
  * create an array of movies
  * each movie should have:
