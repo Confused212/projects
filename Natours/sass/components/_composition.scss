@@ -3,7 +3,7 @@
     &__photo {
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-        border-radius: 0.2rem;
+        border-radius: $border-Radius-small;
         position: absolute;
         z-index: 10;
         transition: all 0.2s;
