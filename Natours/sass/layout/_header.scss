@@ -3,8 +3,6 @@
     background-image: linear-gradient( to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
     //
     @supports (clip-path: polygon(00)) or (-webkit-clip-path: polygon(0 0)) {
@@ -34,7 +32,10 @@
         height: 3.5rem;
     }
     &__text-box {
-        @include positionCenter;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
     }
 }
