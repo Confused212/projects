@@ -7,9 +7,14 @@
 }
 
 .header {
+    font-size: 1.4rem;
+    display: flex;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
@@ -19,10 +24,14 @@
 .sidebar {
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%; // grow, shrink, basis
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view {
     background-color: #fff;
-    background-color: orangered;
     flex: 1; // tells the element to fill the remaining space
+    height: 80rem;
+    background-color: orangered;
 }
